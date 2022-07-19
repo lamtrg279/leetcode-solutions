@@ -23,10 +23,13 @@ var inorderTraversal = function (root) {
   let result = [];
 
   while (current || stack.length !== 0) {
+    //* Push all of the left subtree
     while (current) {
       stack.push(current);
       current = current.left;
     }
+    //* Pop out the stack and add it to the result
+    //* Also move to the right and check its left (if there is any)
     current = stack.pop();
     result.push(current.val);
     current = current.right;
