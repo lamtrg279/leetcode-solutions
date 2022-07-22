@@ -30,4 +30,7 @@ var helper = (nums, left, right) => {
   node.right = helper(nums, mid + 1, right);
   return node;
 };
+
+//*Hint: using binary search, create a helper function that will create the TreeNode
+//* And then call that function for the left and right subnode
 // @lc code=end
