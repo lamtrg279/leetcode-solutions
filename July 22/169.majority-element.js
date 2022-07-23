@@ -23,6 +23,5 @@ var majorityElement = function (nums) {
   for (let key of Object.keys(hs)) {
     if (hs[key] >= x) return key;
   }
-  return hs;
 };
 // @lc code=end
