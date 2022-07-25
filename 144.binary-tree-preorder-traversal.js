@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=94 lang=javascript
+ * @lc app=leetcode id=144 lang=javascript
  *
- * [94] Binary Tree Inorder Traversal
+ * [144] Binary Tree Preorder Traversal
  */
 
 // @lc code=start
@@ -17,25 +17,24 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var inorderTraversal = function (root) {
+var preorderTraversal = function (root) {
   let current = root;
   let stack = [];
   let result = [];
 
   while (current || stack.length !== 0) {
-    //* Left
     while (current) {
+      result.push(current.val); //* Itself
       stack.push(current);
-      current = current.left;
+      current = current.left; //* Left
     }
-    current = stack.pop(); //* Itself
-    result.push(current.val);
+    current = stack.pop();
     current = current.right; //* Right
   }
   return result;
 };
-//* Hint: add root to stack, move to left until !curr
-//* Pop the stack and add it to result, move to right
-//* Repeat
-//* Note: left -> itself -> right
+//*Hint: Add root to result, add right to stack, move to left -> repeat
+//* Preorder: root -> left -> right so we have to add the root (curr) to the result stack.
+//* Then add root.right to the stack and move to the left,
+//* When !curr, we pop the stack
 // @lc code=end
