@@ -22,10 +22,7 @@ var wordPattern = function (pattern, s) {
     if (!a[pattern[i]] && !b[word[i]]) {
       a[pattern[i]] = word[i];
       b[word[i]] = pattern[i];
-    } else if (
-      !a[pattern[i]] !== !b[word[i]] &&
-      !a[pattern[i]] !== !b[word[i]]
-    ) {
+    } else if (a[pattern[i]] !== word[i] || b[word[i]] !== pattern[i]) {
       return false;
     }
   }
