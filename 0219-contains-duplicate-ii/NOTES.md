@@ -1,0 +1,1 @@
+Use hashmap to store the index of the element to lower runtime. Use that index as jth index.
