@@ -1,0 +1,3 @@
+- Make it simple like this: if aray is 1,3,8 we shouldn't think about buying at day 1 and sell on day 8, but rather buy on price 1, sell price 3, buy price 3. and sell at 8
+- Loop through the array, start at 1
+- If prices[i] is bigger the previous day, we sell, and move i up.
