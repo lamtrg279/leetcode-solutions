@@ -1,1 +1,1 @@
-The recursive approach is based on the idea that we compare the values of the first nodes of the two lists, and whichever has the smaller value, we add that node to our merged linked list and call the same function recursively with the next node of that list and the other list's current node. We repeat this process until one of the lists exhausts, and we return the merged list.
+​
