@@ -1,0 +1,1 @@
+s[i].toLowerCase() != s[i].toUpperCase() to filter out the non-character
