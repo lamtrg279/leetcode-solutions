@@ -1,0 +1,1 @@
+Use splice(i,1) to remove the 0 out of the array, the count how many zeroes were removed and push them back.
